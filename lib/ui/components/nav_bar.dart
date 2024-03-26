@@ -50,7 +50,7 @@ class _NavBarState extends State<NavBar> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 50),
+                        const SizedBox(height: 50),
                         NavButtonMobile(
                           text: 'About',
                           fontSize: 12,
@@ -69,7 +69,7 @@ class _NavBarState extends State<NavBar> {
                           containerKey: container4Key,
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(
+                          margin: const EdgeInsets.symmetric(
                             horizontal: 4,
                           ),
                           child: ElevatedButton(
@@ -100,7 +100,7 @@ class _NavBarState extends State<NavBar> {
                   ),
                 );
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.menu,
                 color: Colors.white,
               ),

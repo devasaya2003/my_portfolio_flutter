@@ -29,10 +29,10 @@ class _Container4State extends State<Container4> {
         margin: const EdgeInsets.symmetric(horizontal: 100),
         // margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         // color: AppColors.primary,
-        child: const Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("My Socials",
@@ -40,31 +40,46 @@ class _Container4State extends State<Container4> {
                         TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SizedBox(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              child: Column(
                 children: [
-                  SocialWidget(
-                    imagePath: 'images/gmail.png',
-                    socialLink: "mailto:devasyasingh2000@gmail.com",
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SocialWidget(
+                        imagePath: 'images/github.png',
+                        socialLink: "https://github.com/devasaya2003",
+                        imageWidth: w! / 7,
+                      ),
+                      SocialWidget(
+                        imagePath: 'images/twitter.png',
+                        socialLink: "https://twitter.com/DevasyaSingh1",
+                        imageWidth: w! / 7,
+                      ),
+                      SocialWidget(
+                        imagePath: 'images/linkedin.png',
+                        socialLink: "https://www.linkedin.com/in/devasayasingh",
+                        imageWidth: w! / 7,
+                      ),
+                    ],
                   ),
-                  SocialWidget(
-                    imagePath: 'images/github.png',
-                    socialLink: "https://github.com/devasaya2003",
-                  ),
-                  SocialWidget(
-                    imagePath: 'images/twitter.png',
-                    socialLink: "https://twitter.com/devasaya2003",
-                  ),
-                  SocialWidget(
-                    imagePath: 'images/linkedin.png',
-                    socialLink: "https://www.linkedin.com/in/devasayasingh",
-                  ),
-                  SocialWidget(
-                    imagePath: 'images/insta.png',
-                    socialLink: "https://www.instagram.com/a.divine_story",
-                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SocialWidget(
+                        imagePath: 'images/gmail.png',
+                        socialLink: "mailto:devasyasingh2000@gmail.com",
+                        imageWidth: w! / 10,
+                      ),
+                      SocialWidget(
+                        imagePath: 'images/insta.png',
+                        socialLink: "https://www.instagram.com/a.divine_story",
+                        imageWidth: w! / 10,
+                      ),
+                    ],
+                  )
                 ],
               ),
             )
@@ -91,29 +106,34 @@ class _Container4State extends State<Container4> {
               ],
             ),
             const SizedBox(height: 20),
-            Container(
-              child: const Row(
+            SizedBox(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   SocialWidget(
                     imagePath: 'images/gmail.png',
                     socialLink: "mailto:devasyasingh2000@gmail.com",
+                    imageWidth: w! / 12,
                   ),
                   SocialWidget(
                     imagePath: 'images/github.png',
                     socialLink: "https://github.com/devasaya2003",
+                    imageWidth: w! / 12,
                   ),
                   SocialWidget(
                     imagePath: 'images/twitter.png',
-                    socialLink: "https://twitter.com/devasaya2003",
+                    socialLink: "https://twitter.com/DevasyaSingh1",
+                    imageWidth: w! / 12,
                   ),
                   SocialWidget(
                     imagePath: 'images/linkedin.png',
                     socialLink: "https://www.linkedin.com/in/devasayasingh",
+                    imageWidth: w! / 12,
                   ),
                   SocialWidget(
                     imagePath: 'images/insta.png',
                     socialLink: "https://www.instagram.com/a.divine_story",
+                    imageWidth: w! / 12,
                   ),
                 ],
               ),
@@ -141,29 +161,34 @@ class _Container4State extends State<Container4> {
               ],
             ),
             const SizedBox(height: 20),
-            Container(
-              child: const Row(
+            SizedBox(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   SocialWidget(
                     imagePath: 'images/gmail.png',
                     socialLink: "mailto:devasyasingh2000@gmail.com",
+                    imageWidth: w! / 15,
                   ),
                   SocialWidget(
                     imagePath: 'images/github.png',
                     socialLink: "https://github.com/devasaya2003",
+                    imageWidth: w! / 15,
                   ),
                   SocialWidget(
                     imagePath: 'images/twitter.png',
-                    socialLink: "https://twitter.com/devasaya2003",
+                    socialLink: "https://twitter.com/DevasyaSingh1",
+                    imageWidth: w! / 15,
                   ),
                   SocialWidget(
                     imagePath: 'images/linkedin.png',
                     socialLink: "https://www.linkedin.com/in/devasayasingh",
+                    imageWidth: w! / 15,
                   ),
                   SocialWidget(
                     imagePath: 'images/insta.png',
                     socialLink: "https://www.instagram.com/a.divine_story",
+                    imageWidth: w! / 15,
                   ),
                 ],
               ),
@@ -176,11 +201,13 @@ class _Container4State extends State<Container4> {
 class SocialWidget extends StatelessWidget {
   final String imagePath;
   final String socialLink;
+  final double imageWidth;
 
   const SocialWidget({
     super.key,
     required this.imagePath,
     required this.socialLink,
+    required this.imageWidth,
   });
 
   @override
@@ -196,7 +223,7 @@ class SocialWidget extends StatelessWidget {
       },
       child: Image.asset(
         imagePath,
-        width: w! / 15,
+        width: imageWidth,
       ),
     );
   }
