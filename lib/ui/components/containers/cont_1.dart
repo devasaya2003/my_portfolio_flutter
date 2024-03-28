@@ -30,8 +30,8 @@ class _IntroContainerState extends State<IntroContainer> {
           children: [
             Column(
               children: [
-                Image.asset(
-                  'images/black_self.png',
+                Image.network(
+                  "https://i.ibb.co/NxfFXSk/black-self.png",
                   scale: 1.4,
                 ),
                 const SizedBox(height: 50),
@@ -67,8 +67,8 @@ class _IntroContainerState extends State<IntroContainer> {
           children: [
             Column(
               children: [
-                Image.asset(
-                  'images/black_self.png',
+                Image.network(
+                  "https://i.ibb.co/NxfFXSk/black-self.png",
                   scale: 1.4,
                 ),
                 const SizedBox(height: 50),
@@ -105,8 +105,8 @@ Widget desktopContainer1() {
         children: [
           Column(
             children: [
-              Image.asset(
-                'images/black_self.png',
+              Image.network(
+                "https://i.ibb.co/NxfFXSk/black-self.png",
                 scale: 1.4,
               ),
               const SizedBox(height: 105),
