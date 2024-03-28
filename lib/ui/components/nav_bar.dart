@@ -236,7 +236,7 @@ Widget navButtonMobile(
       onPressed: () {
         Scrollable.ensureVisible(
           containerKey.currentContext!,
-          duration: const Duration(milliseconds: 200),
+          duration: const Duration(seconds: 1),
           curve: Curves.easeInOut,
         );
         if (navigatorKey.currentState!.canPop()) {
