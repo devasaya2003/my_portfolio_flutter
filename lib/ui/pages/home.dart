@@ -30,25 +30,23 @@ class _HomePageState extends State<HomePage> {
             // margin: const EdgeInsets.symmetric(horizontal: 100),
             child: Column(
               children: [
-                const Container1(),
+                const IntroContainer(),
                 const SizedBox(height: 50),
-                Container2(
+                AboutContainer(
                   key: container2Key,
                 ),
                 const SizedBox(height: 50),
-                Container3(
+                ProjectsContainer(
                   key: container3Key,
                 ),
                 const SizedBox(height: 50),
-                // Container4(),
-                // SizedBox(height: 50),
-                Container4(
+                SocialsContainer(
                   key: container4Key,
                 ),
                 const SizedBox(height: 50),
-                Image.asset(
-                  "images/bwf.png",
-                  width: 100,
+                Image.network(
+                  "https://i.ibb.co/Lr1Y8mV/bwf.png",
+                  height: 50,
                 ),
                 const SizedBox(height: 50),
               ],

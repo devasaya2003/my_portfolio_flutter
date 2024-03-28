@@ -3,14 +3,14 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 // ================== INTRO ==================
 
-class Container1 extends StatefulWidget {
-  const Container1({super.key});
+class IntroContainer extends StatefulWidget {
+  const IntroContainer({super.key});
 
   @override
-  State<Container1> createState() => _Container1State();
+  State<IntroContainer> createState() => _IntroContainerState();
 }
 
-class _Container1State extends State<Container1> {
+class _IntroContainerState extends State<IntroContainer> {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(

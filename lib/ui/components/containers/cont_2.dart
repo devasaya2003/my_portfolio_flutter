@@ -5,14 +5,14 @@ import 'package:web_app_example/constants/constants.dart';
 
 // ================== ABOUT ==================
 
-class Container2 extends StatefulWidget {
-  const Container2({super.key});
+class AboutContainer extends StatefulWidget {
+  const AboutContainer({super.key});
 
   @override
-  State<Container2> createState() => _Container2State();
+  State<AboutContainer> createState() => _AboutContainerState();
 }
 
-class _Container2State extends State<Container2> {
+class _AboutContainerState extends State<AboutContainer> {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
@@ -83,8 +83,8 @@ class _Container2State extends State<Container2> {
                 SizedBox(width: w! / 100),
                 RotationTransition(
                   turns: const AlwaysStoppedAnimation(15 / 360),
-                  child: Image.asset(
-                    "images/icon_flutter.png",
+                  child: Image.network(
+                    "https://i.ibb.co/0hPLdqn/icon-flutter.png",
                     width: w! / 20,
                   ),
                 )
@@ -96,8 +96,8 @@ class _Container2State extends State<Container2> {
               children: [
                 RotationTransition(
                   turns: const AlwaysStoppedAnimation(-20 / 360),
-                  child: Image.asset(
-                    "images/sides.png",
+                  child: Image.network(
+                    "https://i.ibb.co/ZM2cNz4/sides.png",
                     width: w! / 5,
                   ),
                 ),
@@ -119,8 +119,8 @@ class _Container2State extends State<Container2> {
                 SizedBox(width: w! / 100),
                 RotationTransition(
                   turns: const AlwaysStoppedAnimation(7 / 360),
-                  child: Image.asset(
-                    "images/hobbies.png",
+                  child: Image.network(
+                    "https://i.ibb.co/bKFDrVB/hobbies.png",
                     width: w! / 5,
                   ),
                 ),
@@ -157,8 +157,8 @@ class _Container2State extends State<Container2> {
                 SizedBox(width: w! / 100),
                 RotationTransition(
                   turns: const AlwaysStoppedAnimation(15 / 360),
-                  child: Image.asset(
-                    "images/icon_flutter.png",
+                  child: Image.network(
+                    "https://i.ibb.co/0hPLdqn/icon-flutter.png",
                     width: w! / 20,
                   ),
                 )
@@ -170,8 +170,8 @@ class _Container2State extends State<Container2> {
               children: [
                 RotationTransition(
                   turns: const AlwaysStoppedAnimation(-20 / 360),
-                  child: Image.asset(
-                    "images/sides.png",
+                  child: Image.network(
+                    "https://i.ibb.co/ZM2cNz4/sides.png",
                     width: w! / 5,
                   ),
                 ),
@@ -193,8 +193,8 @@ class _Container2State extends State<Container2> {
                 SizedBox(width: w! / 100),
                 RotationTransition(
                   turns: const AlwaysStoppedAnimation(7 / 360),
-                  child: Image.asset(
-                    "images/hobbies.png",
+                  child: Image.network(
+                    "https://i.ibb.co/bKFDrVB/hobbies.png",
                     width: w! / 5,
                   ),
                 ),

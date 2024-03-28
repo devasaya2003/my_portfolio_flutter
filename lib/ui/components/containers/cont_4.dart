@@ -5,14 +5,14 @@ import 'package:web_app_example/app/utils/constants.dart';
 
 // ================== Socials ==================
 
-class Container4 extends StatefulWidget {
-  const Container4({super.key});
+class SocialsContainer extends StatefulWidget {
+  const SocialsContainer({super.key});
 
   @override
-  State<Container4> createState() => _Container4State();
+  State<SocialsContainer> createState() => _SocialsContainerState();
 }
 
-class _Container4State extends State<Container4> {
+class _SocialsContainerState extends State<SocialsContainer> {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
@@ -47,20 +47,20 @@ class _Container4State extends State<Container4> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SocialWidget(
-                        imagePath: 'images/github.png',
-                        socialLink: "https://github.com/devasaya2003",
-                        imageWidth: w! / 7,
+                      socialWidget(
+                        "https://i.ibb.co/f9TYNr4/github.png",
+                        "https://github.com/devasaya2003",
+                        w! / 7,
                       ),
-                      SocialWidget(
-                        imagePath: 'images/twitter.png',
-                        socialLink: "https://twitter.com/DevasyaSingh1",
-                        imageWidth: w! / 7,
+                      socialWidget(
+                        "https://i.ibb.co/0Z0PLhc/twitter.png",
+                        "https://twitter.com/DevasyaSingh1",
+                        w! / 7,
                       ),
-                      SocialWidget(
-                        imagePath: 'images/linkedin.png',
-                        socialLink: "https://www.linkedin.com/in/devasayasingh",
-                        imageWidth: w! / 7,
+                      socialWidget(
+                        "https://i.ibb.co/nb9wdk3/linkedin.png",
+                        "https://www.linkedin.com/in/devasayasingh",
+                        w! / 7,
                       ),
                     ],
                   ),
@@ -68,15 +68,15 @@ class _Container4State extends State<Container4> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SocialWidget(
-                        imagePath: 'images/gmail.png',
-                        socialLink: "mailto:devasyasingh2000@gmail.com",
-                        imageWidth: w! / 10,
+                      socialWidget(
+                        "https://i.ibb.co/3YdfczF/gmail.png",
+                        "mailto:devasyasingh2000@gmail.com",
+                        w! / 10,
                       ),
-                      SocialWidget(
-                        imagePath: 'images/insta.png',
-                        socialLink: "https://www.instagram.com/a.divine_story",
-                        imageWidth: w! / 10,
+                      socialWidget(
+                        "https://i.ibb.co/SNZHq6B/insta.png",
+                        "https://www.instagram.com/a.divine_story",
+                        w! / 10,
                       ),
                     ],
                   )
@@ -110,30 +110,30 @@ class _Container4State extends State<Container4> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SocialWidget(
-                    imagePath: 'images/gmail.png',
-                    socialLink: "mailto:devasyasingh2000@gmail.com",
-                    imageWidth: w! / 12,
+                  socialWidget(
+                    "https://i.ibb.co/3YdfczF/gmail.png",
+                    "mailto:devasyasingh2000@gmail.com",
+                    w! / 12,
                   ),
-                  SocialWidget(
-                    imagePath: 'images/github.png',
-                    socialLink: "https://github.com/devasaya2003",
-                    imageWidth: w! / 12,
+                  socialWidget(
+                    "https://i.ibb.co/f9TYNr4/github.png",
+                    "https://github.com/devasaya2003",
+                    w! / 12,
                   ),
-                  SocialWidget(
-                    imagePath: 'images/twitter.png',
-                    socialLink: "https://twitter.com/DevasyaSingh1",
-                    imageWidth: w! / 12,
+                  socialWidget(
+                    "https://i.ibb.co/0Z0PLhc/twitter.png",
+                    "https://twitter.com/DevasyaSingh1",
+                    w! / 12,
                   ),
-                  SocialWidget(
-                    imagePath: 'images/linkedin.png',
-                    socialLink: "https://www.linkedin.com/in/devasayasingh",
-                    imageWidth: w! / 12,
+                  socialWidget(
+                    "https://i.ibb.co/nb9wdk3/linkedin.png",
+                    "https://www.linkedin.com/in/devasayasingh",
+                    w! / 12,
                   ),
-                  SocialWidget(
-                    imagePath: 'images/insta.png',
-                    socialLink: "https://www.instagram.com/a.divine_story",
-                    imageWidth: w! / 12,
+                  socialWidget(
+                    "https://i.ibb.co/SNZHq6B/insta.png",
+                    "https://www.instagram.com/a.divine_story",
+                    w! / 12,
                   ),
                 ],
               ),
@@ -165,30 +165,30 @@ class _Container4State extends State<Container4> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SocialWidget(
-                    imagePath: 'images/gmail.png',
-                    socialLink: "mailto:devasyasingh2000@gmail.com",
-                    imageWidth: w! / 15,
+                  socialWidget(
+                    "https://i.ibb.co/3YdfczF/gmail.png",
+                    "mailto:devasyasingh2000@gmail.com",
+                    w! / 15,
                   ),
-                  SocialWidget(
-                    imagePath: 'images/github.png',
-                    socialLink: "https://github.com/devasaya2003",
-                    imageWidth: w! / 15,
+                  socialWidget(
+                    "https://i.ibb.co/f9TYNr4/github.png",
+                    "https://github.com/devasaya2003",
+                    w! / 15,
                   ),
-                  SocialWidget(
-                    imagePath: 'images/twitter.png',
-                    socialLink: "https://twitter.com/DevasyaSingh1",
-                    imageWidth: w! / 15,
+                  socialWidget(
+                    "https://i.ibb.co/0Z0PLhc/twitter.png",
+                    "https://twitter.com/DevasyaSingh1",
+                    w! / 15,
                   ),
-                  SocialWidget(
-                    imagePath: 'images/linkedin.png',
-                    socialLink: "https://www.linkedin.com/in/devasayasingh",
-                    imageWidth: w! / 15,
+                  socialWidget(
+                    "https://i.ibb.co/nb9wdk3/linkedin.png",
+                    "https://www.linkedin.com/in/devasayasingh",
+                    w! / 15,
                   ),
-                  SocialWidget(
-                    imagePath: 'images/insta.png',
-                    socialLink: "https://www.instagram.com/a.divine_story",
-                    imageWidth: w! / 15,
+                  socialWidget(
+                    "https://i.ibb.co/SNZHq6B/insta.png",
+                    "https://www.instagram.com/a.divine_story",
+                    w! / 15,
                   ),
                 ],
               ),
@@ -198,33 +198,19 @@ class _Container4State extends State<Container4> {
   }
 }
 
-class SocialWidget extends StatelessWidget {
-  final String imagePath;
-  final String socialLink;
-  final double imageWidth;
-
-  const SocialWidget({
-    super.key,
-    required this.imagePath,
-    required this.socialLink,
-    required this.imageWidth,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () async {
-        Uri url = Uri.parse(socialLink);
-        try {
-          await launchUrl(url);
-        } catch (e) {
-          print('Could not launch $url: $e');
-        }
-      },
-      child: Image.asset(
-        imagePath,
-        width: imageWidth,
-      ),
-    );
-  }
+socialWidget(String imagePath, String socialLink, double imageWidth) {
+  return InkWell(
+    onTap: () async {
+      Uri url = Uri.parse(socialLink);
+      try {
+        await launchUrl(url);
+      } catch (e) {
+        print('Could not launch $url: $e');
+      }
+    },
+    child: Image.network(
+      imagePath,
+      width: imageWidth,
+    ),
+  );
 }
