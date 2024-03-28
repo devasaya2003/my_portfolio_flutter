@@ -22,7 +22,7 @@ class ProjectsContainer extends StatelessWidget {
   // ================== Mobile ==================
   Widget mobileContainer3() {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 100),
+      margin: const EdgeInsets.symmetric(horizontal: 40),
       height: h! / 1.5,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -32,7 +32,7 @@ class ProjectsContainer extends StatelessWidget {
             children: [
               Text(
                 "My Projects",
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ],
           ),
@@ -43,7 +43,7 @@ class ProjectsContainer extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Column(
                   children: [
-                    projectWidgetTablet(
+                    projectWidgetMobile(
                       projectsList[index]['url']!,
                       projectsList[index]['title']!,
                       projectsList[index]['description']!,
@@ -73,7 +73,7 @@ class ProjectsContainer extends StatelessWidget {
             children: [
               Text(
                 "My Projects",
-                style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
             ],
           ),
@@ -114,7 +114,7 @@ class ProjectsContainer extends StatelessWidget {
             children: [
               Text(
                 "My Projects",
-                style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
             ],
           ),
@@ -219,6 +219,50 @@ projectWidgetTablet(String projectUrl, String projecttitle,
           Text(
             projectdescription,
             style: const TextStyle(color: Colors.white, fontSize: 16),
+          ),
+          const SizedBox(height: 20),
+          const Text(
+            'Tap the card to check out the github repo!',
+            style: TextStyle(color: Colors.white, fontSize: 10),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+projectWidgetMobile(String projectUrl, String projecttitle,
+    String projectTechnology, String projectdescription) {
+  return ElevatedButton(
+    style: borderedButtonStyle,
+    onPressed: () async {
+      Uri url = Uri.parse(projectUrl);
+      try {
+        await launchUrl(url);
+      } catch (e) {
+        print('Could not launch $url: $e');
+      }
+    },
+    child: Container(
+      width: w! / 1.01,
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            projecttitle,
+            style: const TextStyle(
+                color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            projectTechnology,
+            style: const TextStyle(color: Colors.white, fontSize: 13),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            projectdescription,
+            style: const TextStyle(color: Colors.white, fontSize: 12),
           ),
           const SizedBox(height: 20),
           const Text(

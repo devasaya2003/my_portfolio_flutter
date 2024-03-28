@@ -28,7 +28,7 @@ class AboutContainer extends StatelessWidget {
               children: [
                 Text("About Me",
                     style:
-                        TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
+                        TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
               ],
             ),
             SizedBox(height: 20),
@@ -62,7 +62,7 @@ class AboutContainer extends StatelessWidget {
               children: [
                 Text("About Me",
                     style:
-                        TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+                        TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
               ],
             ),
             const SizedBox(height: 40),

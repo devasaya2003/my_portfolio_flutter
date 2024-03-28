@@ -21,8 +21,6 @@ class SocialsContainer extends StatelessWidget {
   Widget mobileContainer4() {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 100),
-        // margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        // color: AppColors.primary,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -31,7 +29,7 @@ class SocialsContainer extends StatelessWidget {
               children: [
                 Text("My Socials",
                     style:
-                        TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
+                        TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
               ],
             ),
             const SizedBox(height: 20),
@@ -149,7 +147,7 @@ class SocialsContainer extends StatelessWidget {
               children: [
                 Text("My Socials",
                     style:
-                        TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+                        TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
               ],
             ),
             const SizedBox(height: 20),

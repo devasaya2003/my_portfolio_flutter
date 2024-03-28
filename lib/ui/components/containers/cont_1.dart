@@ -36,7 +36,7 @@ class IntroContainer extends StatelessWidget {
                 Text(
                   'Devasaya Singh',
                   style: TextStyle(
-                    fontSize: 40,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
