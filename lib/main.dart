@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Devasaya Singh',
       // theme: ThemeData(
       //   fontFamily: 'HindSiliguri',
       //   primaryColor: AppColors.primary,
