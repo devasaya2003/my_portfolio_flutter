@@ -36,32 +36,17 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                 showDialog(
                   context: navigatorKey.currentContext!,
                   builder: (context) => Container(
-                    margin: EdgeInsets.symmetric(horizontal: w! / 30),
-                    color: Colors.black12,
+                    margin: EdgeInsets.only(left: 10, right: w! / 1.5),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(height: 50),
-                        navButtonMobile(
-                          'About',
-                          12,
-                          4,
-                          container2Key,
-                        ),
-                        navButtonMobile(
-                            'Projects',
-                            12,
-                            4,
-                            container3Key),
-                        navButtonMobile(
-                          'Socials',
-                          12,
-                          4,
-                          container4Key,
-                        ),
+                        navButtonMobile('About', 12, 4, container2Key),
+                        navButtonMobile('Projects', 12, 4, container3Key),
+                        navButtonMobile('Socials', 12, 4, container4Key),
                         Container(
                           margin: const EdgeInsets.symmetric(
-                            horizontal: 4,
+                            horizontal: 0,
                           ),
                           child: ElevatedButton(
                             style: borderedButtonStyle,
@@ -120,11 +105,7 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                 w! / 40,
                 container2Key,
               ),
-              navButton(
-                  'Projects',
-                  14,
-                  w! / 40,
-                  container3Key),
+              navButton('Projects', 14, w! / 40, container3Key),
               navButton(
                 'Socials',
                 14,
@@ -180,11 +161,7 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                 w! / 20,
                 container2Key,
               ),
-              navButton(
-                  'Projects',
-                  16,
-                  w! / 20,
-                  container3Key),
+              navButton('Projects', 16, w! / 20, container3Key),
               navButton(
                 'Socials',
                 16,
@@ -226,51 +203,53 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => const Size.fromHeight(70);
 }
 
-Widget navButton(String text, double fontSize, double margin, GlobalKey containerKey){
+Widget navButton(
+    String text, double fontSize, double margin, GlobalKey containerKey) {
   return Container(
-      margin: EdgeInsets.symmetric(horizontal: margin),
-      child: ElevatedButton(
-        style: borderedButtonStyle,
-        onPressed: () {
-          Scrollable.ensureVisible(
-            containerKey.currentContext!,
-            duration: const Duration(seconds: 1),
-            curve: Curves.easeInOut,
-          );
-        },
-        child: Text(
-          text,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: fontSize,
-          ),
+    margin: EdgeInsets.symmetric(horizontal: margin),
+    child: ElevatedButton(
+      style: borderedButtonStyle,
+      onPressed: () {
+        Scrollable.ensureVisible(
+          containerKey.currentContext!,
+          duration: const Duration(seconds: 1),
+          curve: Curves.easeInOut,
+        );
+      },
+      child: Text(
+        text,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: fontSize,
         ),
       ),
-    );
+    ),
+  );
 }
 
-Widget navButtonMobile(String text, double fontSize, double margin, GlobalKey containerKey) {
+Widget navButtonMobile(
+    String text, double fontSize, double margin, GlobalKey containerKey) {
   return Container(
-      margin: EdgeInsets.symmetric(vertical: margin),
-      child: ElevatedButton(
-        style: borderedButtonStyle,
-        onPressed: () {
-          Scrollable.ensureVisible(
-            containerKey.currentContext!,
-            duration: const Duration(seconds: 1),
-            curve: Curves.easeInOut,
-          );
-          if (navigatorKey.currentState!.canPop()) {
-            navigatorKey.currentState!.pop();
-          }
-        },
-        child: Text(
-          text,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: fontSize,
-          ),
+    margin: EdgeInsets.symmetric(vertical: margin),
+    child: ElevatedButton(
+      style: borderedButtonStyle,
+      onPressed: () {
+        Scrollable.ensureVisible(
+          containerKey.currentContext!,
+          duration: const Duration(milliseconds: 200),
+          curve: Curves.easeInOut,
+        );
+        if (navigatorKey.currentState!.canPop()) {
+          navigatorKey.currentState!.pop();
+        }
+      },
+      child: Text(
+        text,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: fontSize,
         ),
       ),
-    );
+    ),
+  );
 }

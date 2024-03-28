@@ -5,14 +5,9 @@ import 'package:web_app_example/constants/constants.dart';
 
 // ================== ABOUT ==================
 
-class AboutContainer extends StatefulWidget {
+class AboutContainer extends StatelessWidget {
   const AboutContainer({super.key});
 
-  @override
-  State<AboutContainer> createState() => _AboutContainerState();
-}
-
-class _AboutContainerState extends State<AboutContainer> {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
@@ -23,7 +18,6 @@ class _AboutContainerState extends State<AboutContainer> {
   }
 
   // ================== Mobile ==================
-
   Widget mobileContainer2() {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 40),
@@ -58,7 +52,6 @@ class _AboutContainerState extends State<AboutContainer> {
   }
 
   // ================== Tablet ==================
-
   Widget tabletContainer2() {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 100),
@@ -132,7 +125,6 @@ class _AboutContainerState extends State<AboutContainer> {
   }
 
   // ================== Desktop ==================
-
   Widget desktopContainer2() {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 100),
@@ -146,7 +138,7 @@ class _AboutContainerState extends State<AboutContainer> {
                         TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
               ],
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

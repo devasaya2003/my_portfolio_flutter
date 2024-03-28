@@ -3,14 +3,9 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 // ================== INTRO ==================
 
-class IntroContainer extends StatefulWidget {
+class IntroContainer extends StatelessWidget {
   const IntroContainer({super.key});
 
-  @override
-  State<IntroContainer> createState() => _IntroContainerState();
-}
-
-class _IntroContainerState extends State<IntroContainer> {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
@@ -21,7 +16,6 @@ class _IntroContainerState extends State<IntroContainer> {
   }
 
   // ================== Mobile ==================
-
   Widget mobileContainer1() {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -58,7 +52,6 @@ class _IntroContainerState extends State<IntroContainer> {
   }
 
   // ================== Tablet ==================
-
   Widget tabletContainer1() {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),

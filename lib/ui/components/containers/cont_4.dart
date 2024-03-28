@@ -5,14 +5,9 @@ import 'package:web_app_example/app/utils/constants.dart';
 
 // ================== Socials ==================
 
-class SocialsContainer extends StatefulWidget {
+class SocialsContainer extends StatelessWidget {
   const SocialsContainer({super.key});
 
-  @override
-  State<SocialsContainer> createState() => _SocialsContainerState();
-}
-
-class _SocialsContainerState extends State<SocialsContainer> {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
@@ -23,7 +18,6 @@ class _SocialsContainerState extends State<SocialsContainer> {
   }
 
   // ================== Mobile ==================
-
   Widget mobileContainer4() {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 100),
@@ -88,7 +82,6 @@ class _SocialsContainerState extends State<SocialsContainer> {
   }
 
   // ================== Tablet ==================
-
   Widget tabletContainer4() {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 100),
@@ -143,7 +136,6 @@ class _SocialsContainerState extends State<SocialsContainer> {
   }
 
   // ================== Desktop ==================
-
   Widget desktopContainer4() {
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 100),

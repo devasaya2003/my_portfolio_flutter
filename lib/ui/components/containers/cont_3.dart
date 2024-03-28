@@ -2,17 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:web_app_example/app/utils/constants.dart';
+import 'package:web_app_example/app/utils/styles.dart';
+import 'package:web_app_example/constants/constants.dart';
 
 // ================== Projects ==================
 
-class ProjectsContainer extends StatefulWidget {
+class ProjectsContainer extends StatelessWidget {
   const ProjectsContainer({super.key});
 
-  @override
-  State<ProjectsContainer> createState() => _ProjectsContainerState();
-}
-
-class _ProjectsContainerState extends State<ProjectsContainer> {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
@@ -23,154 +20,133 @@ class _ProjectsContainerState extends State<ProjectsContainer> {
   }
 
   // ================== Mobile ==================
-
   Widget mobileContainer3() {
-    return SizedBox(
-        child: Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("My Projects",
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
-          ],
-        ),
-        const SizedBox(height: 20),
-        projectWidgetTablet(
-            "https://github.com/devasaya2003/Quick-News",
-            'Quick News',
-            'Made with Flutter',
-            'A news app that provides you with the latest headlines of your country!'),
-        const SizedBox(height: 30),
-        projectWidgetTablet(
-            "https://github.com/devasaya2003/todoey",
-            'Todoey',
-            'Made with Flutter, Hive and Provider',
-            'A simple todo app that helps you to keep track of your tasks!'),
-        const SizedBox(height: 30),
-        projectWidgetTablet(
-            "https://github.com/devasaya2003/Road-Accident-Analysis",
-            'Road Accident Data Analysis',
-            'Made with Python, Pandas and Matplotlib',
-            'A data analysis project that helps you to visualise the frequency of road accidents in India!'),
-        const SizedBox(height: 30),
-        projectWidgetTablet(
-            "https://github.com/devasaya2003/Cat-vs-Dog-CNN",
-            'Cat Vs. Dog Classifier',
-            'Made with Python, Tensorflow and Keras',
-            'A convulutional neural network that classifies whether the image is of a cat or a dog!'),
-      ],
-    ));
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 100),
+      height: h! / 1.5,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "My Projects",
+                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          const SizedBox(height: 40),
+          Expanded(
+            child: ListView.builder(
+              itemCount: projectsList.length,
+              itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    projectWidgetTablet(
+                      projectsList[index]['url']!,
+                      projectsList[index]['title']!,
+                      projectsList[index]['description']!,
+                      projectsList[index]['detail']!,
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   // ================== Tablet ==================
-
   Widget tabletContainer3() {
     return Container(
-        margin: const EdgeInsets.symmetric(horizontal: 100),
-        // margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        // color: AppColors.primary,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("My Projects",
-                    style:
-                        TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
-              ],
+      margin: const EdgeInsets.symmetric(horizontal: 100),
+      height: h! / 1.5,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "My Projects",
+                style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          const SizedBox(height: 40),
+          Expanded(
+            child: ListView.builder(
+              itemCount: projectsList.length,
+              itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    projectWidgetTablet(
+                      projectsList[index]['url']!,
+                      projectsList[index]['title']!,
+                      projectsList[index]['description']!,
+                      projectsList[index]['detail']!,
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                );
+              },
             ),
-            const SizedBox(height: 40),
-            projectWidgetTablet(
-                "https://github.com/devasaya2003/Quick-News",
-                'Quick News',
-                'Made with Flutter',
-                'A news app that provides you with the latest headlines of your country!'),
-            const SizedBox(height: 30),
-            projectWidgetTablet(
-                "https://github.com/devasaya2003/todoey",
-                'Todoey',
-                'Made with Flutter, Hive and Provider',
-                'A simple todo app that helps you to keep track of your tasks!'),
-            const SizedBox(height: 30),
-            projectWidgetTablet(
-                "https://github.com/devasaya2003/Road-Accident-Analysis",
-                'Road Accident Data Analysis',
-                'Made with Python, Pandas and Matplotlib',
-                'A data analysis project that helps you to visualise the frequency of road accidents in India!'),
-            const SizedBox(height: 30),
-            projectWidgetTablet(
-                "https://github.com/devasaya2003/Cat-vs-Dog-CNN",
-                'Cat Vs. Dog Classifier',
-                'Made with Python, Tensorflow and Keras',
-                'A convulutional neural network that classifies whether the image is of a cat or a dog!'),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 
   // ================== Desktop ==================
-
   Widget desktopContainer3() {
     return Container(
-        margin: const EdgeInsets.symmetric(horizontal: 100),
-        // margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        // color: AppColors.primary,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("My Projects",
-                    style:
-                        TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
-              ],
+      margin: EdgeInsets.symmetric(horizontal: w! / 6),
+      height: h! / 1.5,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "My Projects",
+                style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          const SizedBox(height: 40),
+          Expanded(
+            child: ListView.builder(
+              itemCount: projectsList.length,
+              itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    projectWidget(
+                      projectsList[index]['url']!,
+                      projectsList[index]['title']!,
+                      projectsList[index]['description']!,
+                      projectsList[index]['detail']!,
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                );
+              },
             ),
-            const SizedBox(height: 40),
-            projectWidget(
-                "https://github.com/devasaya2003/Quick-News",
-                'Quick News',
-                'Made with Flutter',
-                'A news app that provides you with the latest headlines of your country!'),
-            const SizedBox(height: 30),
-            projectWidget(
-                "https://github.com/devasaya2003/todoey",
-                'Todoey',
-                'Made with Flutter, Hive and Provider',
-                'A simple todo app that helps you to keep track of your tasks!'),
-            const SizedBox(height: 30),
-            projectWidget(
-                "https://github.com/devasaya2003/Road-Accident-Analysis",
-                'Road Accident Data Analysis',
-                'Made with Python, Pandas and Matplotlib',
-                'A data analysis project that helps you to visualise the frequency of road accidents in India!'),
-            const SizedBox(height: 30),
-            projectWidget(
-                "https://github.com/devasaya2003/Cat-vs-Dog-CNN",
-                'Cat Vs. Dog Classifier',
-                'Made with Python, Tensorflow and Keras',
-                'A convulutional neural network that classifies whether the image is of a cat or a dog!'),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }
 
 projectWidget(String projectUrl, String projecttitle, String projectTechnology,
     String projectdescription) {
   return ElevatedButton(
-    style: ButtonStyle(
-      overlayColor: MaterialStateProperty.all(Colors.grey.shade900),
-      backgroundColor: MaterialStateProperty.all(
-        Colors.black12,
-      ),
-      shape: MaterialStateProperty.all(
-        RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-      ),
-    ),
+    style: borderedButtonStyle,
     onPressed: () async {
       Uri url = Uri.parse(projectUrl);
       try {
@@ -181,7 +157,7 @@ projectWidget(String projectUrl, String projecttitle, String projectTechnology,
     },
     child: Container(
       width: w! / 1.7,
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.symmetric(vertical: 40),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -214,17 +190,7 @@ projectWidget(String projectUrl, String projecttitle, String projectTechnology,
 projectWidgetTablet(String projectUrl, String projecttitle,
     String projectTechnology, String projectdescription) {
   return ElevatedButton(
-    style: ButtonStyle(
-      overlayColor: MaterialStateProperty.all(Colors.grey.shade900),
-      backgroundColor: MaterialStateProperty.all(
-        Colors.black12,
-      ),
-      shape: MaterialStateProperty.all(
-        RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-      ),
-    ),
+    style: borderedButtonStyle,
     onPressed: () async {
       Uri url = Uri.parse(projectUrl);
       try {

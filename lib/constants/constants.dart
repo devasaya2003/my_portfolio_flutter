@@ -18,3 +18,33 @@ const String about2Mobile =
 
 const String about3Mobile =
     "Apart from coding, I love to play badminton, watch anime, play Sekiro, and cars!!!";
+
+List<Map<String, String>> projectsList = [
+  {
+    'url': "https://github.com/devasaya2003/Quick-News",
+    'title': 'Quick News',
+    'description': 'Made with Flutter',
+    'detail':
+        'A news app that provides you with the latest headlines of your country!'
+  },
+  {
+    'url': "https://github.com/devasaya2003/todoey",
+    'title': 'Todoey',
+    'description': 'Made with Flutter, Hive and Provider',
+    'detail': 'A simple todo app that helps you to keep track of your tasks!'
+  },
+  {
+    'url': "https://github.com/devasaya2003/Road-Accident-Analysis",
+    'title': 'Road Accident Data Analysis',
+    'description': 'Made with Python, Pandas and Matplotlib',
+    'detail':
+        'A data analysis project that helps you to visualise the frequency of road accidents in India!'
+  },
+  {
+    'url': "https://github.com/devasaya2003/Cat-vs-Dog-CNN",
+    'title': 'Cat Vs. Dog Classifier',
+    'description': 'Made with Python, Tensorflow and Keras',
+    'detail':
+        'A convulutional neural network that classifies whether the image is of a cat or a dog!'
+  },
+];

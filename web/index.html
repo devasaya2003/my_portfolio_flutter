@@ -36,19 +36,51 @@
     // The value below is injected by flutter build, do not touch.
     const serviceWorkerVersion = null;
   </script>
+  <link rel = "preload" href="https://i.ibb.co/NxfFXSk/black-self.png" as="fetch" crossorigin>
+  <link rel = "preload" href="https://i.ibb.co/0hPLdqn/icon-flutter.png" as="fetch" crossorigin>
+  <link rel = "preload" href="https://i.ibb.co/ZM2cNz4/sides.png" as="fetch" crossorigin>
+  <link rel = "preload" href="https://i.ibb.co/bKFDrVB/hobbies.png" as="fetch" crossorigin>
+  <link rel = "preload" href="https://i.ibb.co/3YdfczF/gmail.png" as="fetch" crossorigin>
+  <link rel = "preload" href="https://i.ibb.co/SNZHq6B/insta.png" as="fetch" crossorigin>
+  <link rel = "preload" href="https://i.ibb.co/nb9wdk3/linkedin.png" as="fetch" crossorigin>
+  <link rel = "preload" href="https://i.ibb.co/0Z0PLhc/twitter.png" as="fetch" crossorigin>
+  <link rel = "preload" href="https://i.ibb.co/Lr1Y8mV/bwf.png" as="fetch" crossorigin>
+  <link rel = "preload" href="https://i.ibb.co/f9TYNr4/github.png" as="fetch" crossorigin>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <div class="loading" id="loading">
+    <style>
+      .loading {
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+        justify-content: center;
+        align-items: center;
+        height: 100px; 
+        width: 100px;
+        border: 3px solid #000000;
+        border-radius: 40%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </div>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
+      let loading = document.querySelector('#loading');
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine().then(function(appRunner) {
+            loading.remove();
             appRunner.runApp();
           });
         }
