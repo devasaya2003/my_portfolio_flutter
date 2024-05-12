@@ -52,7 +52,7 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                             style: borderedButtonStyle,
                             onPressed: () async {
                               Uri url = Uri.parse(
-                                  'https://drive.google.com/file/d/1meT4Za1WIoiuXiPU5xgIbUERtsmr6fE_/view?usp=sharing');
+                                  'https://drive.google.com/file/d/1Au6NrFF8fACB9DUwrW2kzKQHdRgQjFfi/view?usp=sharing');
                               try {
                                 await launchUrl(url);
                               } catch (e) {
@@ -120,7 +120,7 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                   style: borderedButtonStyle,
                   onPressed: () async {
                     Uri url = Uri.parse(
-                        'https://drive.google.com/file/d/1meT4Za1WIoiuXiPU5xgIbUERtsmr6fE_/view?usp=sharing');
+                        'https://drive.google.com/file/d/1Au6NrFF8fACB9DUwrW2kzKQHdRgQjFfi/view?usp=sharing');
                     try {
                       await launchUrl(url);
                     } catch (e) {
@@ -176,7 +176,7 @@ class NavBar extends StatelessWidget implements PreferredSizeWidget {
                   style: borderedButtonStyle,
                   onPressed: () async {
                     Uri url = Uri.parse(
-                        'https://drive.google.com/file/d/1meT4Za1WIoiuXiPU5xgIbUERtsmr6fE_/view?usp=sharing');
+                        'https://drive.google.com/file/d/1Au6NrFF8fACB9DUwrW2kzKQHdRgQjFfi/view?usp=sharing');
                     try {
                       await launchUrl(url);
                     } catch (e) {
